@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 import Footer from "./Footer";
 import MobileNav from "./MobileNav";
 import SectionContainer from "./SectionContainer";
@@ -12,7 +12,7 @@ const headerNavLinks = [
   { href: "/about", title: "About" },
 ];
 
-const LayoutWrapper = ({ children }: { children: ReactNode }) => {
+const LayoutWrapper = ({ children }: { children: ReactElement }) => {
   return (
     <SectionContainer>
       <Head>
