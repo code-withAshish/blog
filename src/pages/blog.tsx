@@ -1,3 +1,4 @@
+import LayoutWrapper from "@/components/LayoutWrapper";
 import ListLayout from "@/components/ListLayout";
 import { GetAllPostsQuery } from "@/lib/gql/graphql";
 import { GraphqlFetcher } from "@/lib/utils/graphql-utils";
@@ -29,7 +30,9 @@ export default function Blog({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <ListLayout posts={posts} title={"Blogs"} />
+      <LayoutWrapper>
+        <ListLayout posts={posts} title={"Blogs"} />
+      </LayoutWrapper>
     </>
   );
 }
