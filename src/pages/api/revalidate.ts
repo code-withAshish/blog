@@ -16,6 +16,8 @@ export default async function handler(
     // this should be the actual path not a rewritten path
     // e.g. for "/blog/[slug]" this should be "/blog/post-1"
     const { slug } = req.body;
+    console.log(req.body);
+
     await res.revalidate(`/${slug.current}`);
     return res.json({ revalidated: true });
   } catch (err) {
