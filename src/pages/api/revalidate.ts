@@ -19,7 +19,7 @@ export default async function handler(
     console.log(req.body);
     console.log(req.headers);
 
-    await res.revalidate(`/${slug.current}`);
+    await res.revalidate(`/blog/${slug.current}`);
     return res.json({ revalidated: true });
   } catch (err) {
     // If there was an error, Next.js will continue
